@@ -7,10 +7,8 @@
     "type": "git",
     "url": "https://github.com/edgartenesaca/hupernikao.git"
   },
-  "main": "./lib/client.js",
+  "main": "./hupernikao.js",
   "dependencies": {
-    "xmlrpc": "1.1.x",
-    "colors": "0.6.2"
   },
   "author": {
     "name": "Edgar Tenesaca",
