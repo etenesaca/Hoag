@@ -1,5 +1,22 @@
 /*
-Esta funcion sirver para completar una cadena con un numero de ceros hasta que tenga un tamanio
+Permitir que se puedan escribir colores en la consola
+*/
+var colors = require('colors');
+colors.setTheme({
+  silly: 'rainbow',
+  input: 'grey',
+  verbose: 'cyan',
+  prompt: 'grey',
+  info: 'green',
+  data: 'grey',
+  help: 'cyan',
+  warn: 'yellow',
+  debug: 'blue',
+  error: 'red'
+});
+
+/*
+Esta funcion sirve para completar una cadena con un numero de ceros hasta que tenga un tamanio
 
 @str = Cadena que se va completar
 @num (Opcional) = Numero de caracteres que tiene que tener la cadena final, valor por defecto es 2
