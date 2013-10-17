@@ -5,7 +5,7 @@
   "homepage": "http://github.com/edgartenesaca/hupernikao",
   "repository": {
     "type": "git",
-    "url": "https://github.com/edgartenesaca/hupernikao.git"
+    "url": "https://github.com/edgartenesaca/node-hupernikao.git"
   },
   "main": "./hupernikao.js",
   "dependencies": {
@@ -22,7 +22,7 @@
   ],
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/edgartenesaca/hupernikao/issues"
+    "url": "https://github.com/edgartenesaca/node-hupernikao/issues"
   },
   "_id": "hupernikao0.1.0",
   "_from": "hupernikao@"

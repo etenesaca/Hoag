@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*
 Permitir que se puedan escribir colores en la consola
 */
