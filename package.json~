@@ -2,13 +2,14 @@
   "name": "hupernikao",
   "version": "0.1.0",
   "description": "",
-  "homepage": "http://github.com/edgartenesaca/hupernikao",
+  "homepage": "http://github.com/etenesaca/node-hupernikao",
   "repository": {
     "type": "git",
-    "url": "https://github.com/edgartenesaca/node-hupernikao.git"
+    "url": "https://github.com/etenesaca/node-hupernikao.git"
   },
   "main": "./hupernikao.js",
   "dependencies": {
+	"colors": "0.6.2"
   },
   "author": {
     "name": "Edgar Tenesaca",
@@ -22,7 +23,7 @@
   ],
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/edgartenesaca/node-hupernikao/issues"
+    "url": "https://github.com/etenesaca/node-hupernikao/issues"
   },
   "_id": "hupernikao0.1.0",
   "_from": "hupernikao@"
