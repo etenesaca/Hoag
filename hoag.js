@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-Permitir que se puedan escribir colores en la consola
+Allow write colors in console
 */
 var colors = require('colors');
 colors.setTheme({
@@ -39,7 +39,7 @@ complete_string = function(str,num,right,character){
     return str;
 }
 /*
-Devuelve la fecha y hora actual en un formato String
+Get date and time in format string
 */
 getDateTime = function() {
     var date = new Date();

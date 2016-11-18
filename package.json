@@ -1,11 +1,11 @@
 {
-  "name": "hupernikao",
+  "name": "hoag",
   "version": "0.1.0",
   "description": "",
-  "homepage": "http://github.com/etenesaca/node-hupernikao",
+  "homepage": "https://github.com/etenesaca/Hoag",
   "repository": {
     "type": "git",
-    "url": "https://github.com/etenesaca/node-hupernikao.git"
+    "url": "https://github.com/etenesaca/Hoag"
   },
   "main": "./hupernikao.js",
   "dependencies": {
@@ -23,8 +23,8 @@
   ],
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/etenesaca/node-hupernikao/issues"
+    "url": "https://github.com/etenesaca/Hoag/issues"
   },
-  "_id": "hupernikao0.1.0",
-  "_from": "hupernikao@"
+  "_id": "hoag0.1.0",
+  "_from": "hoag@"
 }
