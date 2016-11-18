@@ -1,6 +1,6 @@
 # Hoag
 
-[express][express]-Abstract factory of Javascript functions.
+Abstract factory of Javascript functions for NodeJS.
 
 ## Install
 
@@ -22,5 +22,3 @@ hoag.getDateTime();
 ## License
 
 [ISC License][LICENSE]
-
-[express]: https://github.com/strongloop/express
