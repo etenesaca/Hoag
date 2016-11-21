@@ -57,3 +57,25 @@ getDateTime = function() {
 
     return year+"-"+month+"-"+day+" "+hour+":"+min+":"+sec+':'+milisec+" "+timezone;
 }
+
+/* Write log line */
+var logger_type = {
+    info : 1,
+    warn: 2,
+    error: 3
+};
+var logger = function (text, _type, bold) {
+  text = bold && colors.bold(text) || text
+  var ltype = "";
+  if (_type == logger_type.info)
+    ltype = colors.green('INFO');
+  else if (_type == logger_type.warn)
+    ltype = colors.yellow('WARN')
+  else if (_type == logger_type.error)
+    ltype = colors.red('ERROR')
+  var text_result = getDateTime() + '\t' + colors.bold(ltype) + '\t' + text;
+  console.log(text_result);
+}
+
+module.exports.logger_type = logger_type;
+module.exports.logger = logger;

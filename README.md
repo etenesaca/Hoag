@@ -15,8 +15,7 @@ $ npm install hoag --save
 
 var hoag = require('hoag');
 
-hoag.getDateTime();
-
+console.log(hoag.getDateTime());
 
 
 ## License

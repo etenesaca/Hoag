@@ -1,13 +1,13 @@
 {
   "name": "hoag",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "",
   "homepage": "https://github.com/etenesaca/Hoag",
   "repository": {
     "type": "git",
     "url": "https://github.com/etenesaca/Hoag"
   },
-  "main": "./hoag.js",
+  "main": "./hupernikao.js",
   "dependencies": {
 	"colors": "0.6.2"
   },
@@ -25,6 +25,6 @@
   "bugs": {
     "url": "https://github.com/etenesaca/Hoag/issues"
   },
-  "_id": "hoag0.1.1",
+  "_id": "hoag0.1.0",
   "_from": "hoag@"
 }
