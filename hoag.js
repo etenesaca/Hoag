@@ -73,7 +73,9 @@ var logger = function (text, _type, bold) {
     ltype = colors.yellow('WARN')
   else if (_type == logger_type.error)
     ltype = colors.red('ERROR')
-  var text_result = getDateTime() + '\t' + colors.bold(ltype) + '\t' + text;
+  else
+    ltype = colors.green('INFO');
+  var text_result = getDateTime() + '  ' + colors.bold(ltype) + '  ' + text;
   console.log(text_result);
 }
 
