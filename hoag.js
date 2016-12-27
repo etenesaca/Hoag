@@ -79,5 +79,17 @@ var logger = function (text, _type, bold) {
   console.log(text_result);
 }
 
+logger.info = function (argument) {
+  logger(text, logger_type.info, bold)
+};
+logger.warn = function (text, bold) {
+  logger(text, logger_type.warn, bold)
+};
+logger.error = function (text, bold) {
+  logger(text, logger_type.error, bold)
+};
+
+
+
 module.exports.logger_type = logger_type;
 module.exports.logger = logger;
