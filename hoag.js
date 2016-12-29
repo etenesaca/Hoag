@@ -79,7 +79,7 @@ var logger = function (text, _type, bold) {
   console.log(text_result);
 }
 
-logger.info = function (argument) {
+logger.info = function (text, bold) {
   logger(text, logger_type.info, bold)
 };
 logger.warn = function (text, bold) {
