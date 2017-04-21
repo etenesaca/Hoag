@@ -39,12 +39,12 @@ strings.format = function(str) {
     });
 };
 /*
-Funcion para reemplar comodines con el nombre de una clave JSNO: {name}, {date}
+Funcion para reemplazar comodines con el nombre de una clave JSNO: {name}, {date}
 */
 strings.formatJson = function(str, keys) {
     for (var arg in keys)
         str = str.replace(new RegExp("{" + arg + "}", 'g'), keys[arg]);
     return str;
-}
+};
 
 module.exports = strings;
