@@ -26,20 +26,24 @@ dates.getDateTime = function() {
     return year+"-"+month+"-"+day+" "+hour+":"+min+":"+sec+':'+milisec+" "+timezone;
 }
 
-dates.getNowUTC = function() {
-    var date = new Date();
+dates.getNowUTC = function(miliseconds=false) {
+    let date = new Date();
+    let timezone = date.toString().split(" ")[5];
 
-    var hour = Strings.complete_string(date.getUTCHours())
-    var min = Strings.complete_string(date.getUTCMinutes())
-    var sec = Strings.complete_string(date.getUTCSeconds())
+    let YY = date.getUTCFullYear();
+    let MM = Strings.complete_string(date.getUTCMonth() + 1)
+    let DD = Strings.complete_string(date.getUTCDate())
 
-    var year = date.getUTCFullYear();
-    var month = Strings.complete_string(date.getUTCMonth() + 1)
-    var day = Strings.complete_string(date.getUTCDate())
+    let H = Strings.complete_string(date.getUTCHours())
+    let M = Strings.complete_string(date.getUTCMinutes())
+    let S = Strings.complete_string(date.getUTCSeconds())
+    let MLS = Strings.complete_string(date.getUTCMilliseconds())
 
-    var timezone = date.toString().split(" ")[5];
-
-    return year+"-"+month+"-"+day+" "+hour+":"+min+":"+sec;
+    let res_date = `${YY}-${MM}-${DD} ${H}:${M}:${S}`
+    if (miliseconds){
+        res_date = res_date + `.${MLS}`
+    }
+    return res_date;
 }
 
 module.exports = dates;
