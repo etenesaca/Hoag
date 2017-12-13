@@ -1,18 +1,18 @@
 #!/usr/bin/env node
+
 "use strict";
 
 var Strings = require('./strings');
 
-var sql = function () {    
-}
+var sql = function () {}
 // Pasar a una tupla para hacer operaciones del SQL
-sql.tplstr = function(ids) {
+sql.tplstr = function (ids) {
     if (typeof ids == 'undefined' || (typeof ids == 'object' && ids.length == 0))
         return "(0)";
     // Si no es una lista se debe pasar a lista
     if (typeof ids == 'number')
         ids = [ids];
-    return Strings.format("({0})", ids.join(','))
+    return `(${ids.join(',')})`;
 };
 
 /*
@@ -21,13 +21,13 @@ ARMAR EL QUERY PARA UN INSERT
 sql.buildInsert = function (tableName, values) {
     var fvalues = [];
     var fields = []
-    for (var i = values.length - 1; i >= 0; i--){
+    for (var i = values.length - 1; i >= 0; i--) {
         if (typeof values[i] == 'undefined' || typeof values[i].value == 'undefined' || values[i].value == null)
             continue;
 
         var _value = values[i].value + "";
         fields.push(values[i].field);
-        if (['string','date'].indexOf(values[i].type) > -1)
+        if (['string', 'date'].indexOf(values[i].type) > -1)
             _value = Strings.format("'{0}'", values[i].value);
         fvalues.push(_value);
     }
@@ -38,18 +38,21 @@ sql.buildInsert = function (tableName, values) {
 /*
 ARMAR EL QUERY PARA UN UPDATE
 */
-sql.buildUpdate = function (tableName, values, ids) {
+sql.buildUpdate = function (tableName, values, ids, field) {
     var fvalues = [];
-    for (var i = values.length - 1; i >= 0; i--){
+    for (var i = values.length - 1; i >= 0; i--) {
         if (typeof values[i] == 'undefined' || typeof values[i].value == 'undefined')
             continue;
 
         var _value = values[i].value;
-        if (['string','date'].indexOf(values[i].type) > -1)
+        if (['string', 'date'].indexOf(values[i].type) > -1)
             _value = Strings.format("'{0}'", values[i].value);
         fvalues.push(Strings.format("{0} = {1}", values[i].field, _value));
     }
-    var query = Strings.format("UPDATE {0} \nSET \n{1} \nWHERE id in {2};", tableName, fvalues.join(', '), sql.tplstr(ids));
+    let query = `\
+    UPDATE ${tableName}
+    SET ${fvalues.join(', ')}
+    WHERE ${field || 'id'} in ${sql.tplstr(ids)};`;
     return query;
 }
 
